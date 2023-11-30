@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container-fluid{
+      background-color:  #2D2013;
+      color: white;
+      font-family: monospace;
+      /* height: 2200px; */
+    }
+    h1{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <div class="container-fluid">
+<h1>Refresh to get random meals</h1>
+<br>
+<h1 style="text-decoration: underline;">Random meals</h1>
+<br>
+
+
+<% if (recipes && recipes.length > 0) { %>
+  <ul>
+    <% recipes.forEach(recipe => { %>
+      <li>
+        <h2><%= recipe.strMeal %></h2>
+        <img src="<%= recipe.strMealThumb %>" alt="<%= recipe.strMeal %>" width="50%">
+        <p><%= recipe.strInstructions %></p>
+        <% if (recipe.strYoutube) { %>
+          <iframe width="300" height="315" src="<%= recipe.strYoutube.replace('watch?v=', 'embed/') %>" frameborder="0" allowfullscreen></iframe>
+        <% } else { %>
+          <p>No video available for this recipe.</p>
+        <% } %>
+        <p>Ingredients:</p>
+        <ul>
+          <% for (let i = 1; i <= 20; i++) { %>
+            <% const ingredientKey = `strIngredient${i}`; %>
+            <% const measureKey = `strMeasure${i}`; %>
+            <% if (recipe[ingredientKey]) { %>
+              <li><%= recipe[ingredientKey] %> - <%= recipe[measureKey] %></li>
+            <% } %>
+          <% } %>
+        </ul>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>No recipes found.</p>
+<% } %>
+  </div>
+  <div class="container-fluid" style="background-color: black;">
+    <h1 class="text-light">Recipe Rave</h1>
+    <div class="row">
+        <div class="col">
+            <ul style="visibility: hidden;">
+                <li><a href="/">Home </a></li>
+            </ul>
+        </div>
+        <div class="col"><ul>
+            <li style="list-style-type: none;"><a href="/Categories" style="text-decoration: none; color: white;">Categories</a></li>
+        </ul></div>
+        <div class="col"><ul>
+            <li style="list-style-type: none;"><a href="/Random" style="text-decoration: none; color: white;">Country Meals</a></li>
+        </ul></div>
+        <div class="col"><ul>
+            <li style="list-style-type: none;"><a href="/random" style="text-decoration: none; color: white;">Randon meals</a></li>
+        </ul></div>
+    </div><br>
+    <div class="row">
+        <div class="col"><a  href="/about" style="text-decoration: none; color: white;">follow us on our social media</a></div>
+        <div class="col"><a  href="https://twitter.com/AbangTah"><i class="fa fa-twitter" aria-hidden="true" style="color: blue; font-size: 40px;"></i></a></div>
+        <div class="col"><a  href="https://github.com/123abang"><i class="fa fa-github" aria-hidden="true" style="color: gray; font-size: 40px;"></i></a></div>
+        <div class="col"><a  href="https://www.linkedin.com/in/abang-tah-a343b2261/"><i class="fa fa-linkedin" aria-hidden="true" style="color:blue; font-size: 40px;"></i></a></div>
+    </div><br>
+</div>
+</body>
+</html>

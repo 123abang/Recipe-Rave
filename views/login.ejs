@@ -1,0 +1,71 @@
+
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+<script src="/bootstrap/jquery.slim.min.js"></script>
+<script src="/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/bootstrap/popper.min.js"></script>
+
+<style>
+  form{
+    display: grid;
+    justify-content: center;
+    /* width: 50%; */
+    
+  }
+  ::placeholder{
+    text-align: center;
+    color: blue;
+  }
+  .form-check{
+    text-align: center;
+  }
+  h1{
+    text-align: center;
+  }
+   input[type=email] {
+  transition: width 200%  0.4s ease-in-out;
+}
+h1{
+  color: white;
+}
+
+input[type=email]:focus {
+  width: 170%;
+}
+input[type=password] {
+  transition: width 200%  0.4s ease-in-out;
+}
+
+input[type=password]:focus {
+  width: 140%;
+}
+body{
+  background-color:  #2D2013;
+}
+#form-control{
+  border: 3px solid blue;
+}
+#button{
+  border-radius: 90px;
+  background-color: blue;
+}
+</style>
+
+
+
+<div class="container">
+  <img src="/image/Brown_Simple_Minimalist_Cuisine_Logo__1_-removebg-preview.png" alt="" height="300px">
+  <h1>welcome to Recipe Rave</h1>
+  <h1> Please SignUp</h1><br>
+  <form action="/login" method="post" class="login-form">
+    <div class="form-group">
+      <label for="email" style="color: white;">email address</label>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <input type="email" class="form-control" placeholder="email" name="email" required id="form-control">
+    </div>
+    <div class="form-group">
+      <label for="password" style="color: white;">password</label>
+      <input type="password" class="form-control" placeholder="Password" name="password" required id="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary" id="button">SignUp</button>
+  </form>
+</div>

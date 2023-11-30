@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game List</title>
+</head>
+<body>
+  <h1>Games</h1>
+  <ul>
+    <% games.forEach(game => { %>
+      <li>
+        <h2><%= game.name %></h2>
+        <img src="<%= game.background_image %>" alt="Game Image" width="200">
+        <p>Released: <%= game.released %></p>
+        <p>Rating: <%= game.rating %></p>
+        <% if (game.clip) { %>
+          <p>Trailer: <a href="<%= game.clip.clip %>">Watch Trailer</a></p>
+        <% } else { %>
+          <p>No Trailer Available</p>
+        <% } %>
+        <!-- Add other game details based on the RAWG API response -->
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

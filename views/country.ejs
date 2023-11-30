@@ -1,0 +1,106 @@
+<%- include ('partials/nav.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #2D2013;
+        }
+        .bods{
+            border: 1px solid white;
+            height: 220px;
+            border-left: none;
+            border-right: none;
+        }
+        .all{
+            display: grid;
+            justify-content: center;
+        }
+        input{
+            border-radius: 5px;
+            height: 50px;
+            width: 80%;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        button{
+            width: 16%;
+            height: 50px;
+        }
+        .caption{
+            color: #D56E17;
+            cursor: pointer;
+            text-align: center;
+        }
+        .caption a{
+            list-style-type: none;
+            text-decoration: none;
+            color: #D56E17;
+            text-align: center;
+        }
+        img:hover{
+            transform: scale(1.0);
+        }
+        .ingredient{
+            border: 1px solid white;
+            height: 460px;
+            border-left: none;
+            border-right: none;
+        }
+        .random{
+            border: 1px solid white;
+            height: 460px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: white;">Search for meal according to your country </h1> </span><br><br><br><br><br>
+        <div class="bods"><br><br><br>
+            <div class="all">
+                <form action="/country" method="post">
+                    <input type="text" name="country" id="" placeholder="search for a meal">
+                    <button type="submit">Search</button>
+                </form><br>
+                <div class="check" style="display: inline-flex; gap: 10px;">
+                    <h5 style="color: white;"> 🐟  Total Meals: 302</h5>
+                    <h5 style="color: white;"> 🌶  Total Ingredients:575</h5>
+                    <h5 style="color: white;"><i class="fas fa-images    "></i> Images: 302</h5>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container-fluid" style="background-color: black;">
+        <h1 class="text-light">Recipe Rave</h1>
+        <div class="row">
+            <div class="col">
+                <ul style="visibility: hidden;">
+                    <li><a href="/">Home </a></li>
+                </ul>
+            </div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/Categories" style="text-decoration: none; color: white;">Categories</a></li>
+            </ul></div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/Random" style="text-decoration: none; color: white;">Country Meals</a></li>
+            </ul></div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/random" style="text-decoration: none; color: white;">Randon meals</a></li>
+            </ul></div>
+        </div><br>
+        <div class="row">
+            <div class="col"><a  href="/about" style="text-decoration: none; color: white;">follow us on our social media</a></div>
+            <div class="col"><a  href="https://twitter.com/AbangTah"><i class="fa fa-twitter" aria-hidden="true" style="color: blue; font-size: 40px;"></i></a></div>
+            <div class="col"><a  href="https://github.com/123abang"><i class="fa fa-github" aria-hidden="true" style="color: gray; font-size: 40px;"></i></a></div>
+            <div class="col"><a  href="https://www.linkedin.com/in/abang-tah-a343b2261/"><i class="fa fa-linkedin" aria-hidden="true" style="color:blue; font-size: 40px;"></i></a></div>
+        </div><br>
+    </div>
+</body>
+</html>

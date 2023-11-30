@@ -1,0 +1,186 @@
+<%- include('partials/nav.ejs') %>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #2D2013;
+        }
+        .bods{
+            border: 1px solid white;
+            height: 220px;
+            border-left: none;
+            border-right: none;
+        }
+        .all{
+            display: grid;
+            justify-content: center;
+        }
+        input{
+            border-radius: 5px;
+            height: 50px;
+            width: 80%;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        button{
+            width: 16%;
+            height: 50px;
+        }
+        .caption{
+            color: #D56E17;
+            cursor: pointer;
+            text-align: center;
+        }
+        .caption a{
+            list-style-type: none;
+            text-decoration: none;
+            color: #D56E17;
+            text-align: center;
+        }
+        img:hover{
+            transform: scale(1.0);
+        }
+        .ingredient{
+            border: 1px solid white;
+            height: 460px;
+            border-left: none;
+            border-right: none;
+        }
+        .random{
+            border: 1px solid white;
+            height: 670px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-light">
+        <h1 style="text-align: center;">Welcome to Recipe Rave <br> database of Reciepes from around the world.🍖 </h1> </span><br><br><br><br><br>
+        <div class="bods"><br><br><br>
+            <div class="all">
+                <form action="/" method="post">
+                    <input type="text" name="go" id="" placeholder="search for a meal">
+                    <button type="submit">Search</button>
+                </form><br>
+                <div class="check" style="display: inline-flex; gap: 10px;">
+                    <h5> 🐟  Total Meals: 302</h5>
+                    <h5> 🌶  Total Ingredients:575</h5>
+                    <h5><i class="fas fa-images    "></i> Images: 302</h5>
+                </div>
+            </div>
+        </div><br>
+        <div class="check">
+            <h1 style="text-align: center;">Latest meals</h1>
+            <div class="row">
+                <div class="col-6 col-md-3"><img src="/image/kos9av1699014767.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Lamb Palif (Plov)</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/oe8rg51699014028.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Strawberries Romanoff</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/ebvuir1699013665.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Potato Salad (Oliver salad)</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/7n8su21699013057.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Soup (Ukha)</a></div> 
+                </div><br>
+            </div><br>
+            <div class="row">
+                <div class="col-6 col-md-3"><img src="/image/0206h11699013358.jpg" alt="" width="100%">
+                    <div class="caption"><a href=""> Pancakes 🥞</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/zadvgb1699012544.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Beetroot Soup (Borscht)</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/60oc3k1699009846.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Cabbage Soup (Shchi)</a></div>
+                </div><br>
+                <div class="col-6 col-md-3"><img src="/image/hqaejl1695738653.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Bread omelette</a></div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="ingredient">
+            <h1 style="text-align: center;">Popular Ingredient</h1>
+            <div class="row">
+                <div class="col-6 col-md-3"><img src="/image/Chicken.png" alt="" width="100%">
+                    <div class="caption"><a href="">Chicken</a></div>
+            </div>
+                <div class="col-6 col-md-3"><img src="/image/Salmon.png" alt="" width="100%">
+                    <div class="caption"><a href="">Salmon</a></div>
+            </div>
+                <div class="col-6 col-md-3"><img src="/image/Beef.png" alt="" width="100%">
+                    <div class="caption"><a href="">Beef</a></div>
+            </div>
+                <div class="col-6 col-md-3"><img src="/image/Pork.png" alt="" width="100%">
+                    <div class="caption"><a href="">Pork</a></div>
+            </div>
+            </div>
+        </div><br>
+        <div class="random">
+            <h1 style="text-align: center;">Random Meals</h1><br>
+            <div class="row">
+                <div class="col-6 col-md-3"><img src="/image/wyrqqq1468233628.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Bakewell tart</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/y2irzl1585563479.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Honey Yougurt Cheesecake</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/hyarod1565090529.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Stamppot</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/wqurxy1511453156.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Vegetarian Chilli</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3"><img src="/image/yrstur1511816601.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Sugar pie</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/txsupu1511815755.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Timbits</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/7mxnzz1593350801.jpg" alt="" width="100%">
+                    <div class="caption"><a href="">Rogaliki (polish Croissant cookies)</a></div>
+                </div>
+                <div class="col-6 col-md-3"><img src="/image/lx1kkj1593349302.jpg" alt="" width="100%">
+                    <div class="caption"><a href=""></a>Polish Chicken Soup</div>
+                </div>
+            </div>
+        </div>
+      </div><br><br><br><br><br><br>
+      <div class="container-fluid" style="background-color: black;">
+        <h1 class="text-light">Recipe Rave</h1>
+        <div class="row">
+            <div class="col">
+                <ul style="visibility: hidden;">
+                    <li><a href="/">Home </a></li>
+                </ul>
+            </div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/Categories" style="text-decoration: none; color: white;">Categories</a></li>
+            </ul></div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/Random" style="text-decoration: none; color: white;">Country Meals</a></li>
+            </ul></div>
+            <div class="col"><ul>
+                <li style="list-style-type: none;"><a href="/random" style="text-decoration: none; color: white;">Randon meals</a></li>
+            </ul></div>
+        </div><br>
+        <div class="row">
+            <div class="col"><a  href="/about" style="text-decoration: none; color: white;">follow us on our social media</a></div>
+            <div class="col"><a  href="https://twitter.com/AbangTah"><i class="fa fa-twitter" aria-hidden="true" style="color: blue; font-size: 40px;"></i></a></div>
+            <div class="col"><a  href="https://github.com/123abang"><i class="fa fa-github" aria-hidden="true" style="color: gray; font-size: 40px;"></i></a></div>
+            <div class="col"><a  href="https://www.linkedin.com/in/abang-tah-a343b2261/"><i class="fa fa-linkedin" aria-hidden="true" style="color:blue; font-size: 40px;"></i></a></div>
+        </div><br>
+    </div>
+</body>
+</html>

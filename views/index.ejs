@@ -1,0 +1,54 @@
+<!-- recipes.ejs -->
+<%- include('partials/nav.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipes</title>
+  <style>
+    .container-fluid{
+      background-color:  #2D2013;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Recipes</h1>
+
+        <% if (recipes && recipes.length > 0) { %>
+          <ul>
+            <% recipes.forEach(recipe => { %>
+              <li>
+                <h2><%= recipe.strMeal %></h2>
+                <img src="<%= recipe.strMealThumb %>" alt="<%= recipe.strMeal %>" width="50%">
+                <p><%= recipe.strInstructions %></p>
+                <% if (recipe.strYoutube) { %>
+                  <iframe width="300" height="315" src="<%= recipe.strYoutube.replace('watch?v=', 'embed/') %>" frameborder="0" allowfullscreen></iframe>
+                <% } else { %>
+                  <p>No video available for this recipe.</p>
+                <% } %>
+                <p>Ingredients:</p>
+                <ul>
+                  <% for (let i = 1; i <= 20; i++) { %>
+                    <% const ingredientKey = `strIngredient${i}`; %>
+                    <% const measureKey = `strMeasure${i}`; %>
+                    <% if (recipe[ingredientKey]) { %>
+                      <li><%= recipe[ingredientKey] %> - <%= recipe[measureKey] %></li>
+                    <% } %>
+                  <% } %>
+                </ul>
+              </li>
+            <% }) %>
+          </ul>
+        <% } else { %>
+          <p>No recipes found.</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

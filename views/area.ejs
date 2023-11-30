@@ -1,0 +1,32 @@
+<%- include('partials/nav.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display: grid;
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>result for <%= country %></h1>
+    <div class="row justify-content-center">
+        <% recipe.forEach(recipes=>{%>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <h2><%= recipes.strMeal %></h2> 
+                    <!-- <h2><%= recipes.idMeal %></h2> -->
+                    <img src="<%=recipes.strMealThumb %>"  alt="" width="50%" class="img-fluid"> 
+                </div>
+            </div>
+            <%})%>
+    </div>
+</div>
+</body>
+</html>
